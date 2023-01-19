@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="Space invader.png">
+<head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    html {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 100%;
+    }
+    html,body {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        overflow-y: auto;
+        background-image: url("Space wallpaper.jpg");
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    h1 {
+        color: white;
+        text-align: center;
+        line-height: 200px;
+        font-size: 100px; 
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 50px;
+        text-align: center;
+        background-color: rgb(50, 50, 50, .5);
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .container {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(50, 50, 50, .5);
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    img {
+        max-width: 100%
+    }
+    .image {
+        flex-basis: 40%
+    }
+    .text {
+        font-size: large;
+        color: white;
+    }
+    .text1 {
+        font-size: 70px;
+        padding-left: 20px;
+    }
+    .text2 {
+        font-size: 70px;
+        padding-right: 20px;
+    }
+    .header{
+        padding: 10px 16px;
+        background-color: black;
+        color: white;
+    }
+    .content {
+        padding: 16px;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .sticky + .content {
+        padding-top: 102px;
+    }
+    .wrapper {
+        position: relative;
+        text-align: right;
+    }
+    input {
+        opacity: 0;
+        pointer-events: none;
+        touch-action: none;
+    }
+    .dropdown {
+        background-color: rgb(211, 211 , 211, .5);
+        color: white;
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        flex-direction: column;
+        padding: 20px;
+        gap: 5px;
+        right: 0;
+    }
+    input:checked ~ .dropdown {
+        display: flex;
+    }
+    a {
+        color: black;
+        opacity: 100%;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    a.menu {
+        box-shadow: inset 0 0 0 0 blue;
+        color: black;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+    a.menu:hover {
+        box-shadow: inset 200px 0 0 0 blue;
+        color: white;
+    }
+    @media only screen and (max-width:600px) {
+        .container {
+            display: flex;
+            height: auto;
+            vertical-align: middle;
+            background-color: rgb(50, 50, 50, .5);
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        h3 {
+            font-size: 12px;
+        }
+    }
+    
+
+</style>
+<title>S&S</title>
+
+</head>
+
+<body>
+    <div class="header" id="myHeader">
+        <div class="container2" style="background-color: black;">
+            <div class="image">
+                <div class="wrapper">
+                    <input id="toggler" type="checkbox">
+                    <label for="toggler">
+                        <img src="Menu button.jpg" width="15%" height="auto">
+                    </label>
+                    <div class="dropdown" style="vertical-align: middle;">
+                        <div style="align-items: center; border: 1px black; border-style:solid"><a href="" style="border: 2px;" class="menu">Početna</a></div>
+                        <div style="align-items: center; border: 1px black; border-style:solid"><a href="Planeti.html" class="menu">Planeti</a></div>
+                        <div style="align-items: center; border: 1px black; border-style:solid"><a href="Zvijezde.html" class="menu">Zvijezde</a></div>
+                        <div style="align-items: center; border: 1px black; border-style:solid"><a href="Crne rupe.html" class="menu">Crne rupe</a></div>
+                        <div style="align-items: center; border: 1px black; border-style:solid"><a href="Nebule.html" class="menu">Nebule</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text1">
+                <h3 style="font-size: 100%;">S&S</h3>
+            </div>
+            <div class="image">
+                <img src="Space invader.png" width="15%" height="auto">
+            </div>
+        </div>
+    </div>
+    <p>
+        <div class="container">
+            <div class="text2">
+                <h2 style="font-size: 70px;">Planeti</h2>
+            </div>
+            <div class="image">
+                <a href="Planeti.html"><img src="Planet 1.jpg"></a>
+            </div>
+        </div> <br>
+
+        <div class="container">
+            <div class="image">
+                <a href="Zvijezde.html"><img src="Zvijezda 1.jpg"></a>
+            </div>
+            <div class="text1">
+                <h3 style="font-size: 70px;">Zvijezde</h3>
+            </div>
+        </div> <br>
+
+        <div class="container">
+            <div class="text2">
+                <h3 style="font-size: 70px;">Crne rupe</h3>
+            </div>
+            <div class="image">
+                <a href="Crne rupe.html"><img src="Black hole 1.jpg"></a>
+            </div>
+        </div> <br>
+
+        <div class="container">
+            <div class="image">
+                <a href="Nebule.html"><img src="Nebula 1.jpg"></a>
+            </div>
+            <div class="text1">
+                <h3 style="font-size: 70px;">Nebule</h3>
+            </div>
+        </div> <br>
+        
+    </p>
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+    </script>
+</body>
+
+</html>
